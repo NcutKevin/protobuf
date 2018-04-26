@@ -19,6 +19,8 @@ class TestBase extends PHPUnit_Framework_TestCase
 
     public function expectFields(TestMessage $m)
     {
+        $this;
+
         $this->assertSame(-42,  $m->getOptionalInt32());
         $this->assertSame(42,  $m->getOptionalUint32());
         $this->assertSame(-44,  $m->getOptionalSint32());
